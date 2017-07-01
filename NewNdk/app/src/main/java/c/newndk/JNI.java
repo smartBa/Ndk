@@ -5,9 +5,6 @@ package c.newndk;
  */
 
 public class JNI {
-    {
-        System.loadLibrary("Hello");
-    }
     /**
      * 调用c代码对应方法
      * @return

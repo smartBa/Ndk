@@ -6,7 +6,10 @@ import android.util.Log;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-
+    {
+        System.loadLibrary("Hello");
+    }
+    private TextView add;
     private TextView textView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -15,5 +18,7 @@ public class MainActivity extends AppCompatActivity {
         String result =new JNI().sayHello();
         textView=(TextView) findViewById(R.id.text);
         textView.setText(result);
+        add=(TextView)findViewById(R.id.add);
+        add.setText(String.valueOf(new JavaCall().add(1,2)));
     }
 }
